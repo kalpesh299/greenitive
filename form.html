@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="form.css">
+      <script src="https://kit.fontawesome.com/e93f128918.js" crossorigin="anonymous"></script>
+      <title>Login Form</title>
+</head>
+<body>
+      <div class="center">
+            <div class="header">
+                        Login Form  
+            </div>
+            <form>
+               <input type="text" placeholder="name">
+               <i class="fas fa-child"></i>
+               <input type="text" placeholder=" id">
+               <i class="fas fa-id-badge"></i>
+               <input id="pswrd" type="password" placeholder="password">
+               <i class="fas fa-lock" onclick="show()"></i>
+
+                <input type="submit" value="Sign in">
+                <a href="#">Forgot Password ?</a>
+            </form>
+      </div>
+
+            <script>
+                  function show(){
+                        var pswrd = document.getElementById('pswrd');
+                        var icon = document.querySelector('.fas');
+                        if (pswrd.type === "password") {
+                              pswrd.type = "text";
+                              pswrd.style.marginTop="20px";
+                              icon.style.color="gray"
+                        }else{
+                              pswrd.type = "password";
+                              icon.style.color= "gray";
+                        }
+                      }
+            </script>
+      
+</body>
+</html>
